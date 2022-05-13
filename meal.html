@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitMe</title>
+
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icons/shortcuticon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="user-menu" onclick="openMenu()">
+                <img src="./icons/man.png">
+            </div>
+            <div class="logo">
+                <img src="./icons/text2.png">
+            </div>
+            <div class="move-back">
+                <a href="diet.html"> <img src="./icons/left-chevron.png"> </a>
+            </div>
+        </div>
+        <div id="menu" class="close-menu">
+            <div class="triangle">
+
+            </div>
+            <dl>
+                <dt> <a href="main.html"> <img src="./icons/house.png"> Strona główna </a> </dt>
+
+                <div class="spacing-line"> </div>
+
+                <dt> <a href="workouts.html"> <img src="./icons/yoga-mat.png"> Twoje treningi </a> </dt>
+                <dt> <a href="diet.html"> <img src="./icons/cooking.png"> Twoja dieta </a> </dt>
+                <dt> <a href="#medal"> <img src="./icons/medal.png"> Twoje rekordy i notatki </a> </dt>
+
+                <div class="spacing-line"> </div>
+
+                <dt> <a href="#"> <img src="./icons/man.png"> Konto </a> </dt>
+                <dt> <a href="#"> <img src="./icons/settings.png"> Ustawienia </a> </dt>
+                <div class="logout-box">
+                    <div class="spacing-line"> </div>
+                    <a href="#">
+                        <dt> <img src="./icons/logout.png"> Wyloguj się
+                    </a> </dt>
+                </div>
+            </dl>
+        </div>
+    </header>
+    <main>
+        <div class="your-meals-div">
+            <p class="your-meals-div-title">Twoje posiłki </p>
+            <div class="meals-carousel">
+
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <p> Wczoraj </p>
+                        <span> 01.01.2022 </span>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="meal">
+                            <p> Śniadanie </p>
+                            <div class="detailsBtn" onclick="openDetails(1)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet1" class="mealDet hide">
+                                <span> asdasdasdadad </span>
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Drugie śniadanie </p>
+                            <div class="detailsBtn" onclick="openDetails(2)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet2" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Obiad </p>
+                            <div class="detailsBtn" onclick="openDetails(3)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet3" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Kolacja </p>
+                            <div class="detailsBtn" onclick="openDetails(4)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet4" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-footer">
+                        <div class="macro">
+                            <p class="macro-title"> kcal </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Węglowodany  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Tłuszcze  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Białko  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <p> Dzisiaj </p>
+                        <span> 02.01.2022 </span>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="meal">
+                            <p> Śniadanie </p>
+                            <div class="detailsBtn" onclick="openDetails(5)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet5" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Drugie śniadanie </p>
+                            <div class="detailsBtn" onclick="openDetails(6)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet6" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Obiad </p>
+                            <div class="detailsBtn" onclick="openDetails(7)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet7" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Kolacja </p>
+                            <div class="detailsBtn" onclick="openDetails(8)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet8" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-footer">
+                        <div class="macro">
+                            <p class="macro-title"> kcal </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Węglowodany  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Tłuszcze  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Białko  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <p> Jutro </p>
+                        <span> 03.01.2022 </span>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="meal">
+                            <p> Śniadanie </p>
+                            <div class="detailsBtn" onclick="openDetails(9)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet9" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Drugie śniadanie </p>
+                            <div class="detailsBtn" onclick="openDetails(10)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet10" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Obiad </p>
+                            <div class="detailsBtn" onclick="openDetails(11)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet11" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="meal">
+                            <p> Kolacja </p>
+                            <div class="detailsBtn" onclick="openDetails(12)">
+                                <img src="./icons/more.png">
+                            </div>
+                            <div id="mealDet12" class="mealDet hide">
+                                asfdasasfdasdasdasdadasd
+
+                                <button onclick="addMeal()">
+                                    <span> + </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-footer">
+                        <div class="macro">
+                            <p class="macro-title"> kcal </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Węglowodany  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Tłuszcze  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                        <div class="macro">
+                            <p class="macro-title"> Białko  </p>
+                            <span class="macro-value"> 10 g </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mealWindow" class="add-meal-window hide">
+                <button class="close" onclick="closeWindow()">
+                    <img src="./icons/close.png">
+                </button>
+                <h1 class="add-meal-title"> Dodaj produkt lub potrawę </h1>
+
+                <div class="search-box">
+                    <input class="meal-input" type="text" placeholder="Podaj produkt lub posiłek...">
+                    <button class="searchBtn">
+                        <img src="./icons/right-arrow.png">
+                    </button>
+                </div>
+                <div class="result-box hide">
+                    <div class="meal-result">
+                        <div class="meal-det">
+                            <p class="meal-name"> Lorem Ipsum </p>
+                            <span class="meal-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus neque mauris, ut
+                                posuere justo luctus vel. Curabitur rhoncus faucibus felis. Donec scelerisque faucibus risus, a
+                                dignissim ligula maximus ac.
+                            </span>
+                            <span class="meal-macro">
+                                kcal: 10 - Węglowodany 10g - Tłuszcze 10g - Białko 10g
+                            </span>
+                        </div>
+                        <button class="add-meal">
+                            <span> + </span>
+                        </button>
+                    </div>
+                    <div class="meal-result">
+                        <div class="meal-det">
+                            <p class="meal-name"> Lorem Ipsum </p>
+                            <span class="meal-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus neque mauris, ut
+                                posuere justo luctus vel. Curabitur rhoncus faucibus felis. Donec scelerisque faucibus risus, a
+                                dignissim ligula maximus ac.
+                            </span>
+                            <span class="meal-macro">
+                                kcal: 10 - Węglowodany 10g - Tłuszcze 10g - Białko 10g
+                            </span>
+                        </div>
+                        <button class="add-meal">
+                            <span> + </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="new-meal-box">
+                    <div class="error-message hide">
+                        <span>
+                            Niestety nie posiadamy w bazie podanego produktu/posiłku, ale możesz nam pomóc dodając go. 
+                        </span>
+
+                        <button> Dodaj produkt </button>
+                        <button> Dodaj posiłek </button>
+                    </div>
+                </div>
+                <div class="new-product hide">
+                    <div class="product-table">
+                        <input class="product-name" type="text" placeholder="Nazwa">
+                        <span class="info"> Podaj wartości na 100g </span>
+                        
+                        <span class="macro-name"> Wartość energetyczna: <input type="text"> kcal </span>
+                        <span class="macro-name"> Tłuszcze: <input type="text"> g </span>
+                        <span class="macro-name"> W tym nasycone: <input type="text"> g </span>
+                        <span class="macro-name"> Węglowodany: <input type="text"> g </span>
+                        <span class="macro-name"> Cukry: <input type="text"> g </span>
+                        <span class="macro-name"> Błonnik: <input type="text"> g </span>
+                        <span class="macro-name"> Białko: <input type="text"> g </span>
+                        <span class="macro-name"> Sól: <input type="text"> g </span>
+                    </div>
+
+                    <button class="add-productBtn"> Dodaj produkt </button>
+                </div>
+                <div class="new-meal hide">
+                    <input class="meal-name" type="text" placeholder="Nazwa">  
+                    
+                    <p> Dodaj składniki </p>
+                    <span> 
+                        <input class="component-input" type="text" placeholder="Nazwa produktu...">
+                        <button class="searchBtn">
+                            <img src="./icons/right-arrow.png">
+                        </button>
+                    </span>
+                    <div class="component-box">
+                        <div class="component-div">
+                            <p> Lorem Ipsum </p> 
+                            <span> 10 kcal - 10g </span>
+                            <button>
+                                <img src="./icons/delete.png">
+                            </button>
+                        </div>
+                        <div class="component-div">
+                            <p> Lorem Ipsum </p> 
+                            <span> 10 kcal - 10g </span>
+                            <button>
+                                <img src="./icons/delete.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="recipe-box">
+                        <ol>
+                            <li class="recipe-div">
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus neque mauris, ut
+                                    posuere justo luctus vel. Curabitur rhoncus faucibus felis. Donec scelerisque faucibus risus, a
+                                    dignissim ligula maximus ac.
+                                </span>
+                                <button>
+                                    <img src="./icons/delete.png">
+                                </button>
+                            </li>
+                            <li class="recipe-div">
+                            <span>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus neque mauris, ut
+                                    posuere justo luctus vel. Curabitur rhoncus faucibus felis. Donec scelerisque faucibus risus, a
+                                    dignissim ligula maximus ac.
+                                </span>
+                                <button>
+                                    <img src="./icons/delete.png">
+                                </button>
+                            </li>
+                        </ol>
+
+                        <button class="next-stepBtn"> + Dodaj kolejny krok </button>
+                    </div>
+
+                    <button class="add-productBtn"> Dodaj produkt </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>
+                Designed and created by <span> Stanisław Dudzik </span> & <span> Grzegorz Flakowicz </span> &copy; All
+                rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="./script/menu.js" type="text/javascript"> </script>
+    <script src="./script/water-monitor.js" type="text/javascript"> </script>
+    <script src="./script/open-details.js" type="text/javascript"> </script>
+    <script src="./script/close.js" type="text/javascript"> </script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./script/slick-initialize.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FitMe</title>
+
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icons/shortcuticon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="user-menu" onclick="openMenu()">
+                <img src="./icons/man.png">
+            </div>
+            <div class="logo">
+                <img src="./icons/text2.png">
+            </div>
+        </div>
+        <div id="menu" class="close-menu">
+            <div class="triangle">
+
+            </div>
+            <dl>
+                <dt> <a href="main.html"> <img src="./icons/house.png"> Strona główna </a> </dt>
+
+                <div class="spacing-line"> </div>
+
+                <dt> <a href="workouts.html"> <img src="./icons/yoga-mat.png"> Twoje treningi </a> </dt>
+                <dt> <a href="diet.html"> <img src="./icons/cooking.png"> Twoja dieta </a> </dt>
+                <dt> <a href="#medal"> <img src="./icons/medal.png"> Twoje rekordy i notatki </a> </dt>
+
+                <div class="spacing-line"> </div>
+
+                <dt> <a href="#"> <img src="./icons/man.png"> Konto </a> </dt>
+                <dt> <a href="#"> <img src="./icons/settings.png"> Ustawienia </a> </dt>
+                <div class="logout-box"> 
+                    <div class="spacing-line"> </div>
+                    <a href="#"><dt> <img src="./icons/logout.png"> Wyloguj się </a> </dt> 
+                </div>
+            </dl>
+        </div>
+    </header>
+    <main>
+        <div class="your-diet-div">
+            <p class="title"> Twoja dieta </p>
+
+            <div class="your-meal-bg">
+                <div class="your-meals">
+                    <h3> Twoje posiłki </h3>
+
+                    <span class="text">
+                        Tutaj możesz sprawdzić szczegóły swojej diety, posiłków które zjadłeś oraz 
+                        ilość spożytych makroelementów. 
+                    </span>
+                    <span class="text">
+                        Możesz również dodawać własne przepisy oraz posiłki.
+                    </span>
+
+                    <button class="more-btn" onclick="location.href='meal.html'">
+                        <span class="hover-underline-animation"> Więcej </span>
+                        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
+                        <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)" fill="#fff"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+
+            <h2> Polecane posiłki </h2>
+            <div class="diet-carousel">
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+                    <div class="diet-card-description">
+
+                        <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="explore-diet-card">
+                    <p class="explore-diet-title"> 
+                        WARZYWA Z SOCZEWICĄ
+                    </p>
+
+                    <div class="diet-card-description">
+
+                       <span class="meal-desc"> 
+                            <h3> Składniki: </h3>
+                            
+                            5g kimn rzymski, 200g soczewicy, 1 szczypta pieprzu, 2 łyżeczki soli, 400g warzywa                            
+                        
+                            <p> 565 kcal - Tłuszcz 8,4g - Węglowodany 87,4g - Białko 32,5g </p>
+                        </span>
+
+                        <button class="noselect">
+                            <span class="text">Więcej</span>
+                            <span class="icon">
+                               <img src="./icons/right-arrow.png">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>
+                Designed and created by <span> Stanisław Dudzik </span> & <span> Grzegorz Flakowicz </span> &copy; All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="./script/menu.js" type="text/javascript"> </script>
+    <script src="./script/water-monitor.js" type="text/javascript"> </script>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./script/slick-initialize.js"> </script>
+</body>
+</html>
