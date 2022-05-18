@@ -30,12 +30,16 @@ main{
 .navbar{
     width: 100%;
     height: 85px;
-    background: linear-gradient(200deg, #b1c456 50%, #9bbb3a 74%);
+    background: -moz-linear-gradient(100deg, #B1C456 0%, #5C92D8 100%);
+    background: -webkit-linear-gradient(100deg, #B1C456 0%, #5C92D8 100%);
+    background: linear-gradient(100deg, #B1C456 0%, #5C92D8 100%); 
     border-bottom: 1px solid #abbd51;
     -webkit-box-shadow: 0px 5px 5px 0px #bdbdbd;
     -moz-box-shadow: 0px 5px 5px 0px #bdbdbd;
     box-shadow: 0px 5px 5px 0px #bdbdbd;
 }
+
+
 
 .move-back{
     position: absolute;
@@ -462,7 +466,7 @@ dt img{ width: 30px; }
 
 .diet-carousel {
     width: 100%;
-    height: 400px;
+    min-height: 400px;
 }
 
 .explore-diet-card {
@@ -486,13 +490,14 @@ dt img{ width: 30px; }
 
 .diet-card-description{
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     background-color: #ffffffb6;
     color: #fff;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     margin-top: 80px;
     padding-top: 5px;
+    padding-bottom: 10px;
     box-shadow: 0px -1px 4px 0px #18181859;
     backdrop-filter: blur(8px);
 }
@@ -521,6 +526,7 @@ dt img{ width: 30px; }
     box-shadow: 1px 1px 3px #00000026;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
 }
    
 .diet-card-description button, button span {
@@ -1426,7 +1432,7 @@ li .recipe-div{
 
 .all-box-bg{
     max-width: 600px;
-    min-height: 350px;
+    min-height: 200px;
     border-radius: 15px;
     background-color: #c5c5c57e;
     background-image: url('./images/else_workouts.jpg');
@@ -1436,22 +1442,23 @@ li .recipe-div{
     margin: 10px;
 }
 
+.all-box-bg h3{
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
 .all-box-text{
     width: 100%;
     height: 60%;
-    margin-top: 40%;
+    position: relative;
+    bottom: -20px;
     background-color: #ffffffb6;
     color: #fff;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 0px -1px 4px 0px #18181859;
     backdrop-filter: blur(8px);
-}
-
-.all-box-text h3{
-    position: relative;
-    top: -55%;
-    text-align: center;
 }
 
 .all-box-text span{
@@ -1466,7 +1473,7 @@ li .recipe-div{
     cursor: pointer;
     display: flex;
     position: relative;
-    bottom: -10px;
+    bottom: 20px;
     align-items: center;
     background: #ffffff65;
     border: none;
@@ -1741,7 +1748,23 @@ textarea{
 .exercise-div button:hover svg { transform: translateX(15px); }
    
 .exercise-div button:active { transform: scale(0.95); }
-   
+
+/* RECORD */
+
+.records-and-notes-div{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.records-and-notes-div .title {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    color: #2476ac;
+}
 
 /* RESPONSIVE */
 
@@ -1762,6 +1785,20 @@ textarea{
         background-repeat: no-repeat;
         transition: all 0.2s ease-in-out;
         background-size: 200%;
+    }
+
+    .diet-card-description{
+        width: 100%;
+        min-height: 200px;
+        background-color: #ffffffb6;
+        color: #fff;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-top: 80px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        box-shadow: 0px -1px 4px 0px #18181859;
+        backdrop-filter: blur(8px);
     }
 }
 
@@ -1937,7 +1974,7 @@ textarea{
         float: left;
     }
 
-    button {
+    .water-bar button {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1948,14 +1985,14 @@ textarea{
         border-radius: 1.25em;
         transition: all 0.2s linear;
         margin-left: 15px;
-        color: rgba(255, 255, 255, 0.767);
+        color: #ffffffc4;
         width: 45px;
         height: 45px;
         font-size: 40px;
         border: 1px solid #5684c4;
     }
        
-    button:hover {
+    .water-bar button:hover {
         box-shadow: 3.4px 2.5px 4.9px #00000006,
         8.6px 6.3px 12.4px #00000009,
         17.5px 12.8px 25.3px #0000000b,
@@ -2039,16 +2076,6 @@ textarea{
 }
 
 @media (max-width: 1260px){
-    .calendar-footer :nth-child(1),
-    .calendar-footer :nth-child(4) {
-        width: 15%;
-    }
-
-    .calendar-footer :nth-child(2),
-    .calendar-footer :nth-child(3) {
-        width: 35%;
-    }
-
     .calendar-footer .macro-title{
         font-size: 14px;
         text-align: center;
@@ -2252,7 +2279,7 @@ textarea{
         height: 45px;
     }
 
-    button {
+    .water-bar button {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2328,6 +2355,26 @@ textarea{
     .close{
         top: -10px;
         right: 10px;
+    }
+
+    .exercise-div{
+        width: 100%;
+    }
+
+   .exercise-div .exercise-presentation img {
+        width: 80%;
+    }
+
+    .your-last-workout-bg { width: 100%;}
+
+    .your-meals { padding-bottom: 80px; }
+
+    .your-meals h3{ text-align: center; }
+
+    .your-meals .text{ 
+        text-align: left; 
+        margin: 5px; 
+        padding: 5px 10px 5px 10px;
     }
 }
 
@@ -2415,17 +2462,15 @@ textarea{
     }
     
     dt{
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     
     dt img {
-        width: 50px;
-        margin-right: 10px;
-        margin-left: 20px;
+        display: none;
     }
     
     dt a{
@@ -2983,6 +3028,163 @@ textarea{
 }
 
 @media (max-width: 320px) {
-     
+    .logo{
+        width: 100%;
+        height: 45px;
+        padding-top: 20px;
+        padding-left: 50px;
+        text-align: center;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+
+    .move-back{ top: 25px; } 
+
+    .move-back img{ width: 40px; }
+
+    .user-menu { 
+        height: 50px; 
+        width: 50px;
+        top: 8px;
+        right: 5px; 
+    }
+
+    .user-menu img{ height: 50px; }
+
+    /* DIET */
+
+    .your-diet-div{ width: 100%; }
+
+    .your-meal-bg{ width: 95%; }
+
+    .your-meals { padding-bottom: 80px; }
+
+    .your-meals h3{ text-align: center; }
+
+    .your-meals .text{ 
+        text-align: left; 
+        margin: 5px; 
+        padding-bottom: 20px;
+    }
+
+    .title{ margin-left: 10px; }
+
+    .your-diet-div h2{ margin-left: 10px; }
+
+    .your-meals button {
+        bottom: 5px;
+    }
+
+    .add-meal-window{
+        width: 95%;
+        height: 75vh;
+        padding: 30px 10px;
+        background-color: #ffffffcb;
+        position: absolute;
+        top: 80px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        backdrop-filter: blur(5px) !important;
+        -webkit-box-shadow: 0px 5px 15px 0px #4d4d4dbf;
+        -moz-box-shadow: 0px 5px 15px 0px #4d4d4dbf;
+        box-shadow: 0px 5px 15px 0px #4d4d4dbf;
+    }
+
+    .calendar-card{
+        margin: 5px;
+    }
+
+    .close{
+        top: 15px;
+        right: 15px;
+    }
+
+    .add-meal-window .add-meal-title{
+        font-size: 24px;
+    }
+
+    .search-box input{
+        width: 80%;
+    }
+
+    .searchBtn {
+        height: 29px;
+        border: none;
+        border-left: 1px solid black;
+        background-color: inherit;
+        position: relative;
+        top: -32px;
+        right: 25px;
+        font-size: 18px;
+        float: right;
+        background-color: #fff;
+    }
+
+    .macro{
+        width: calc(100% / 4);
+        text-align: center;
+    }
+
+    .macro-title {text-align: center; display: inline-block;}
+    .macro-value {text-align: center;}
+
+    /* WORKOUTS */
+
+    .your-meals-div { width: 100%; }
+
+    .your-workout-bg{ width: 95%; }
+
+    .your-workout-bg h3{ 
+        text-align: center;
+        margin: 0; 
+        margin-top: 10px;
+        padding: 5px; 
+    }
+
+    .your-workout-bg .text{
+        text-align: center;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .workouts-div{ width: 100%; }
+
+    .workouts-div .last-workout{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .your-last-workout-bg{
+        width: 100%;
+    }
+
+    .all-workouts{
+        width: 100%;
+    }
+
+    .all-workout-box{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .all-box-bg{
+        max-width: 250px;
+        min-height: 150px;
+        border-radius: 15px;
+        background-color: #c5c5c57e;
+        background-image: url('./images/else_workouts.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .diet-card-description button{
+        bottom: 5px;
+    }
 }
 

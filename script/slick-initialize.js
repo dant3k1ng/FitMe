@@ -22,8 +22,8 @@ $(document).ready(function(){
               {
                 breakpoint: 600,
                 settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
+                  slidesToShow: 1,
+                  slidesToScroll: 1
                 }
               },
               {
@@ -38,8 +38,6 @@ $(document).ready(function(){
     });
 
     $('.meals-carousel').slick({
-      centerMode: true,
-      centerPadding: '60px',
       slidesToShow: 3,
       slidesToScroll: 1,
       responsive: [
@@ -47,38 +45,22 @@ $(document).ready(function(){
           breakpoint: 1080,
           settings: {
             arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 820,
+          settings: {
+            arrows: false,
             slidesToShow: 2,
             slidesToScroll: 1
           }
         },
         {
-          breakpoint: 620,
+          breakpoint: 720,
           settings: {
             arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 320,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -110,8 +92,6 @@ $(document).ready(function(){
           breakpoint: 620,
           settings: {
             arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -120,8 +100,6 @@ $(document).ready(function(){
           breakpoint: 480,
           settings: {
             arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
             slidesToShow: 1,
             slidesToScroll: 1
           }
@@ -130,8 +108,6 @@ $(document).ready(function(){
           breakpoint: 320,
           settings: {
             arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
             slidesToShow: 1,
             slidesToScroll: 1
           }
