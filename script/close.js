@@ -1,18 +1,9 @@
-function closeWindow(){
-    if(!document.getElementById("mealWindow").classList.contains('hide'))
-    document.getElementById("mealWindow").classList.toggle('hide');
+function multiClose(nameClass){
+    if(!document.getElementById(nameClass).classList.contains('hide'))
+        document.getElementById(nameClass).classList.toggle('hide');
 }
 
-function addMeal(){
-    document.getElementById("mealWindow").classList.remove('hide');
-}
-
-function addWorkout(){
+function multiOpen(nameClass){
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.getElementById("createWorkout").classList.remove('hide');
-}
-
-function closeWorkout(){
-    if(!document.getElementById("createWorkout").classList.contains('hide'))
-    document.getElementById("createWorkout").classList.toggle('hide');
+    document.getElementById(nameClass).classList.remove('hide');
 }

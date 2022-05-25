@@ -58,10 +58,88 @@
     <main>
         <div class="records-and-notes-div">
             <p class="title"> Twoje rekordy i notatki </p>
-            
+
             <div class="records-box">
-                
+                <div class="achievement-box">
+                    <h3> Obecny day streak </h3>
+                    <div class="achievement">
+                        <span> 20 dni </span>
+                    </div>
+                </div>
+                <div class="achievement-box">
+                    <h3> Najdłuższy day streak </h3>
+                    <div class="achievement">
+                        <span> 35 dni </span>
+                    </div>
+                </div>
+                <div class="achievement-box">
+                    <h3> Łączna liczba spalonych kalorii </h3>
+                    <div class="achievement">
+                        <span> 20000 kcal </span>
+                    </div>
+                </div>
+                <div class="achievement-box">
+                    <h3> Łączny czas treningu </h3>
+                    <div class="achievement">
+                        <span> 500 min </span>
+                    </div>
+                </div>
+                <div class="achievement-box">
+                    <h3> Łączna ilość wypitej wody </h3>
+                    <div class="achievement">
+                        <span> 2000 l </span>
+                    </div>
+                </div>
             </div>
+
+            <div class="notes-div">
+                <p> Notatki </p>
+
+                <div class="notes-box">
+                    <div class="note">
+                        <img src="./icons/close.png">
+                        <p> Note title </p>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel orci tempus, tempus
+                            eros eu, imperdiet urna. Nam libero ante, varius ac augue ac, suscipit finibus libero. Etiam
+                            enim lectus, condimentum in elit in, blandit efficitur tellus. Aenean mauris elit, euismod
+                            nec mi eu, facilisis eleifend urna. Aenean a porttitor nisi, sit amet bibendum augue.
+                            Curabitur eget mauris vitae massa cursus vestibulum eget vel justo.
+                        </span>
+                    </div>
+                    <div class="note">
+                        <img src="./icons/close.png">
+                        <p> Note title </p>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel orci tempus, tempus
+                            eros eu, imperdiet urna. Nam libero ante, varius ac augue ac, suscipit finibus libero. Etiam
+                            enim lectus, condimentum in elit in, blandit efficitur tellus. Aenean mauris elit, euismod
+                            nec mi eu, facilisis eleifend urna. Aenean a porttitor nisi, sit amet bibendum augue.
+                            Curabitur eget mauris vitae massa cursus vestibulum eget vel justo.
+                        </span>
+                    </div>
+                    <div class="add-note">
+                        <button class="add-button" id="add" onclick="multiOpen('add-note-modal')">
+                            <img src="./icons/plus.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="add-note-modal" class="add-note-modal hide">
+            <button class="close" onclick="multiClose('add-note-modal')">
+                <img src="./icons/close.png">
+            </button>
+            <h2 class="title"> Dodaj notatkę </h2>
+
+            <input class="note-title-input" type="text" placeholder="Tytuł notatki...">
+
+            <span> Treść notatki: </span>
+            <textarea rows="5">
+
+            </textarea>
+
+            <button class="add-productBtn"> Dodaj produkt </button>
         </div>
     </main>
     <footer>
