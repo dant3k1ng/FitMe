@@ -4,6 +4,6 @@ function multiClose(nameClass){
 }
 
 function multiOpen(nameClass){
-    window.scrollTo({ top: 0, behavior: 'smooth' });
     document.getElementById(nameClass).classList.remove('hide');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }

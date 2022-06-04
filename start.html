@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitMe</title>
+
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icons/shortcuticon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Major+Mono+Display&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <div class="start-background">
+        <div class="start-navbar">
+            <div class="start-logo">
+                <img src="./icons/text2.png">
+            </div>
+        </div>
+        <div class="start-body">
+            <p> <span class="hover-animation"> Don't give up</span> on your dreams, <br/>
+                or your dreams give up on <b>you.</b> <br/>
+                <span class="author">~John Wooden </span>
+            </p>
+                
+        </div>
+        <div class="login-button-div">
+            <button class="more-btn" onclick="multiOpen('login-div')">
+                <span class="hover-underline-animation"> Zaloguj się </span>
+                <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 46 16">
+                <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)" fill="#fff"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="login-div" class="login-div hide">
+            <div id="login-box" class="login-box">
+                <div class="header">
+                    <div class="login-header" onclick="multiOpen('login-content'); multiClose('register-content')">
+                        Zaloguj się
+                    </div>
+                    <div class="register-header" onclick="multiOpen('register-content'); multiClose('login-content')">
+                        Zarejestruj się
+                    </div>
+                </div>
+                <button class="close-register" onclick="multiClose('login-div')"> 
+                    <img src="./icons/close.png">
+                </button>
+                <div class="content">
+                    <div id="login-content" class="login-content ">
+                        <h2> Logowanie </h2>
+
+                        <div class="input-box">
+                            <div class="input-container">
+                                <input class="login_input" type="text" placeholder="">
+                                <label> Nazwa użytkownika </label>
+                                <span class="underline"></span> 
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="input-container">
+                                <input class="login_input" type="password" placeholder="">
+                                <label> Hasło </label>
+                                <span class="underline"></span> 
+                                <button class="reminder" onclick="multiClose('login-box'); multiOpen('change-password-div')"> Zapomniałeś hasła? </button>
+                            </div> 
+                        </div>
+
+                        <p class="check"> <input type="checkbox"> Zapamiętaj mnie </p>
+
+                        <button class="login_btn"> Zaloguj się </button>
+
+                        <p> lub zaloguj się przez </p>
+
+                        <button class="login_btn facebook"> Facebook </button>
+                        <button class="login_btn google"> Google </button>
+                    </div>
+                    <div id="register-content" class="register-content hide">
+                        <h2> Rejestracja </h2>
+
+                        <div class="input-box">
+                            <div class="input-container">
+                                <input class="login_input" type="text" placeholder="np. FitMan">
+                                <label> Nazwa użytkownika </label>
+                                <span class="underline"></span> 
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <div class="input-container">
+                                <input class="login_input" type="email" placeholder="np. example@fitme.com">
+                                <label> E-mail </label>
+                                <span class="underline"></span> 
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <div class="input-container">
+                                <input class="login_input" type="password" placeholder="min. 8 znaków, jedna duża litera, cyfra">
+                                <label> Podaj hasło </label>
+                                <span class="underline"></span> 
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <div class="input-container">
+                                <input class="login_input" type="password" placeholder="">
+                                <label> Powtórz hasło </label>
+                                <span class="underline"></span> 
+                            </div>
+                        </div>
+
+                        <div class="newsletter">
+                            <p> <input type="checkbox"> Zapisz mnie do newslettera </p>
+                        </div>
+
+                        <button class="login_btn"> Zarejestruj się </button>
+                    </div>
+                </div>
+            </div>
+            <div id="change-password-div" class="change-password-div hide">
+                <div class="change-password-content">
+                    <h2> Zmień hasło </h2>
+
+                    <span>
+                        Nie martw się, to zdarza się najlepszym! <br/>
+                        A żeby poprawić pamięć, spożywaj więcej witamin z rodziny B. 
+                    </span>
+
+                    <div class="input-box">
+                        <div class="input-container">
+                            <input class="login_input" type="email" placeholder="np. example@fitme.com">
+                            <label> E-mail </label>
+                            <span class="underline"></span> 
+                        </div>
+                    </div>
+
+                    <button class="login_btn"> Wyślij e-mail </button>
+                    <button class="login_btn cancel" onclick="multiClose('change-password-div'); multiOpen('login-box')"> Anuluj </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/menu.js" type="text/javascript"> </script>
+    <script src="./script/water-monitor.js" type="text/javascript"> </script>
+    <script src="./script/open-details.js" type="text/javascript"> </script>
+    <script src="./script/close.js" type="text/javascript"> </script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./script/slick-initialize.js"> </script>
+</body>
+
+</html>

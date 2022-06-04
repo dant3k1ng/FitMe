@@ -39,8 +39,6 @@ main{
     box-shadow: 0px 5px 5px 0px #bdbdbd;
 }
 
-
-
 .move-back{
     position: absolute;
     top: 15px;
@@ -186,6 +184,369 @@ dt img{ width: 30px; }
 }
 
 .footer span { font-weight: bold; }
+
+/* START */
+
+.close-register{
+    position: relative;
+    float: right;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    background-color: #ffffff00;
+    border: none;
+}
+
+.close-register img { width: 20px; }
+
+.close-register:hover{
+    cursor: pointer;
+}
+
+.login-box{
+    width: 100%;
+    border-radius: 0;
+}
+
+.start-background{
+    width: 100% !important;
+    min-height: 100vh;
+    background-image: url('./images/start-bg.jpg');
+    margin: 0;
+    padding-bottom: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.start-navbar { width: 100%; margin-bottom: 50px;}
+
+.start-navbar .start-logo { width: 100%; text-align: left;}
+
+.start-logo img { width: 200px; margin: 20px; }
+
+.start-body{
+    width: 90%;
+    min-height: 60vh;
+    margin: 0 auto 0 auto;
+    color: #fff;
+    font-size: 58px;
+    text-align: right;  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.start-body p{
+    letter-spacing: 2px;
+    line-height: 72px;
+    font-family: 'Major Mono Display', monospace;
+    cursor: default;
+}
+
+.start-body .hover-animation {
+    background: #ffffff00;
+    background: linear-gradient(to right, #ffffff00 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all .3s ease;
+}
+
+.start-body p:hover .hover-animation {
+    background-position: right bottom;
+    color: #000000;
+    transition: all .3s ease;
+}
+
+.start-body .author{
+    font-size: 32px;
+}
+
+.login-button-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px 50px 0;
+}
+
+.login-button-div button{
+    display: flex;
+    border: none;
+    background: none;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    padding: 10px 0px 10px 0;
+    margin-left: 40px;
+}
+
+.login-button-div .hover-underline-animation{
+    font-size: 18px;
+}
+
+.login-div{
+    width: 100% !important;
+    min-height: 100vh;
+    background-color: #ffffff00;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box{
+    width: 600px;
+    min-height: 300px;
+    background-color: #e7e7e7ef;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 23px -6px #000000bf;
+    -moz-box-shadow: 0px 5px 23px -6px #000000bf;
+    box-shadow: 0px 5px 23px -6px #000000bf;
+    padding-bottom: 50px;
+}
+
+.header{
+    max-width: 100%;
+    min-height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ffffffc5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.login-header, .register-header {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0 15px 0;
+}
+
+.login-header:hover, .register-header:hover {
+    cursor: pointer;
+    color: #414141;
+}
+
+.login-header { border-right: 1px solid #969696; }
+.login-header { border-right: 1px solid #969696; }
+
+.content { 
+    width: 100%; 
+    border-top: 1px solid #969696; 
+    padding-top: 40px;
+}
+
+.login-content{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-content h2{
+    text-align: center;
+    margin-top: 0;
+}
+
+.input-box{
+    margin-top: 50px;
+}
+
+.input-container{
+    width: 80%;
+    margin: -15px auto -15px auto;
+}
+
+.input-container input[type="text"], 
+.input-container input[type="password"],
+.input-container input[type="email"]{
+    width: 100%;
+    height: 20px;
+    display: block;
+    background-color: inherit;
+    position: relative;
+    z-index: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 1px solid #464646;
+    padding-bottom: 2px;
+    text-indent: 5px;
+}
+
+.input-container input::-webkit-input-placeholder { opacity: 0; transition: 0.4s ease}
+
+.input-container input::-moz-placeholder { opacity: 0; transition: 0.4s ease }
+ 
+.input-container input:-ms-input-placeholder { opacity: 0; transition: 0.4s ease }
+ 
+.input-container input:-moz-placeholder { opacity: 0; transition: 0.4s ease }
+
+.input-container input:focus::-webkit-input-placeholder { opacity: 1; transition: 0.4s ease }
+
+.input-container input:focus::-moz-placeholder { opacity: 1; transition: 0.4s ease }
+ 
+.input-container input:focus:-ms-input-placeholder { opacity: 1; transition: 0.4s ease }
+ 
+.input-container input:focus:-moz-placeholder { opacity: 1; transition: 0.4s ease }
+
+.input-container label{
+    display: block;
+    position: relative;
+    top: -27px;
+    left: 5px;
+    transition: 0.4s;
+}
+
+.login_input:focus ~ label{
+    display: block;
+    position: relative;
+    top: -45px;
+    font-size: 14px;
+    transition: 0.4s;
+    color:#4caf50;
+ }
+
+ .underline{
+    width: 0%;
+    height: 1px;
+    display: block;
+    background-color: #464646;
+    position: relative;
+    top: -21px;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.login_input:focus ~ .underline{
+    width: 102%;
+    height: 5px;
+    background-color: #4caf50;
+    transition: 0.4s;
+}
+
+.reminder{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    position: relative;
+    top: -15px;
+    right: -10px;
+    float: right;
+    color: #5a5a5a;
+}
+
+.reminder:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.login_btn{
+    display: block;
+    margin: 50px auto 0px auto;
+    width: 80%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: #49b80091;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login_btn:hover{
+    -webkit-box-shadow: 0px 0px 3px 0px #5252529a;
+    -moz-box-shadow: 0px 0px 3px 0px #5252529a;
+    box-shadow: 0px 0px 3px 0px #5252529a;
+    cursor: pointer;
+}
+
+.login-content p{
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+.facebook{ 
+    background-color: #4267B2; 
+    margin-top: 30px; 
+    background-image: url('./icons/facebook-app-symbol.png');
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: calc(5px);
+}
+
+.google{ 
+    background-color: #DB4437; 
+    margin-top: 15px; 
+    background-image: url('./icons/google.png');
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: calc(5px);
+}
+
+.register-content{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-content h2{
+    text-align: center;
+    margin-top: 0;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-content p{
+    margin-top: 30px;
+}
+
+.change-password-div{
+    width: 600px;
+    min-height: 300px;
+    background-color: #e7e7e7ef;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 23px -6px #000000bf;
+    -moz-box-shadow: 0px 5px 23px -6px #000000bf;
+    box-shadow: 0px 5px 23px -6px #000000bf;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.change-password-content{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.change-password-content h2{
+    margin-top: 0;
+    text-align: center;    
+}
+
+.change-password-content span{
+    display: block;
+    text-align: center;
+}
+
+.change-password-content .cancel{
+    margin-top: 10px;
+    background-color: #f04949;
+}
 
 /* MAIN */
 
@@ -2572,6 +2933,25 @@ li .recipe-div{
         margin: 5px; 
         padding: 5px 10px 5px 10px;
     }
+
+    .close-register{
+        position: relative;
+        float: right;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        background-color: #ffffff00;
+        border: none;
+    }
+
+    .start-body{ font-size: 48px; }
+
+    .start-body p{
+        letter-spacing: 1px;
+        line-height: 68px;
+    }
+
+    .start-body .author{ font-size: 28px; }
 }
 
 @media (max-width: 690px) {
@@ -2748,6 +3128,15 @@ li .recipe-div{
 }
 
 @media (max-width: 520px) {
+    .start-body{ font-size: 38px; }
+
+    .start-body p{
+        letter-spacing: 1px;
+        line-height: 58px;
+    }
+
+    .start-body .author{ font-size: 26px; }
+
     .water-bar {
         display: flex;
         flex-direction: column;
@@ -3248,6 +3637,15 @@ li .recipe-div{
     }
 
     .user-menu img{ height: 50px; }
+
+    .start-body{ font-size: 32px; }
+
+    .start-body p{
+        letter-spacing: 1px;
+        line-height: 52px;
+    }
+
+    .start-body .author{ font-size: 24px; }
 
     /* DIET */
 
