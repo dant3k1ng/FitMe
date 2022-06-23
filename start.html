@@ -13,33 +13,44 @@
     <link rel="shortcut icon" href="./icons/shortcuticon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Major+Mono+Display&family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Major+Mono+Display&family=Roboto&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
+    <link href="./aos-master/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="start-background">
+    <div id="start-background" class="start-background">
         <div class="start-navbar">
             <div class="start-logo">
                 <img src="./icons/text2.png">
             </div>
         </div>
-        <div class="start-body">
-            <p> <span class="hover-animation"> Don't give up</span> on your dreams, <br/>
-                or your dreams give up on <b>you.</b> <br/>
+        <div class="start-body" data-aos="fade-left"
+            data-aos-offset="500"
+            data-aos-duration="500">
+            <p> <span class="hover-animation"> Don't give up</span> on your dreams, <br />
+                or your dreams give up on <b>you.</b> <br />
                 <span class="author">~John Wooden </span>
             </p>
-                
+
         </div>
         <div class="login-button-div">
             <button class="more-btn" onclick="multiOpen('login-div')">
                 <span class="hover-underline-animation"> Zaloguj się </span>
-                <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 46 16">
-                <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)" fill="#fff"></path>
+                <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="40" height="20"
+                    viewBox="0 0 46 16">
+                    <path id="Path_10" data-name="Path 10"
+                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(30)" fill="#fff"></path>
                 </svg>
             </button>
+        </div>
+        <div class="more-div">
+            <img src="./icons/swipe.png">
         </div>
         <div id="login-div" class="login-div hide">
             <div id="login-box" class="login-box">
@@ -51,7 +62,7 @@
                         Zarejestruj się
                     </div>
                 </div>
-                <button class="close-register" onclick="multiClose('login-div')"> 
+                <button class="close-register" onclick="multiClose('login-div')">
                     <img src="./icons/close.png">
                 </button>
                 <div class="content">
@@ -62,16 +73,18 @@
                             <div class="input-container">
                                 <input class="login_input" type="text" placeholder=" ">
                                 <label> Nazwa użytkownika </label>
-                                <span class="underline"></span> 
+                                <span class="underline"></span>
                             </div>
                         </div>
                         <div class="input-box">
                             <div class="input-container">
                                 <input class="login_input" type="password" placeholder=" ">
                                 <label> Hasło </label>
-                                <span class="underline"></span> 
-                                <button class="reminder" onclick="multiClose('login-box'); multiOpen('change-password-div')"> Zapomniałeś hasła? </button>
-                            </div> 
+                                <span class="underline"></span>
+                                <button class="reminder"
+                                    onclick="multiClose('login-box'); multiOpen('change-password-div')"> Zapomniałeś
+                                    hasła? </button>
+                            </div>
                         </div>
 
                         <p class="check"> <input type="checkbox"> Zapamiętaj mnie </p>
@@ -90,7 +103,7 @@
                             <div class="input-container">
                                 <input class="login_input" type="text" placeholder="np. FitMan">
                                 <label> Nazwa użytkownika </label>
-                                <span class="underline"></span> 
+                                <span class="underline"></span>
                             </div>
                         </div>
 
@@ -98,15 +111,16 @@
                             <div class="input-container">
                                 <input class="login_input" type="email" placeholder="np. example@fitme.com">
                                 <label> E-mail </label>
-                                <span class="underline"></span> 
+                                <span class="underline"></span>
                             </div>
                         </div>
 
                         <div class="input-box">
                             <div class="input-container">
-                                <input class="login_input" type="password" placeholder="min. 8 znaków, jedna duża litera, cyfra">
+                                <input class="login_input" type="password"
+                                    placeholder="min. 8 znaków, jedna duża litera, cyfra">
                                 <label> Podaj hasło </label>
-                                <span class="underline"></span> 
+                                <span class="underline"></span>
                             </div>
                         </div>
 
@@ -114,7 +128,7 @@
                             <div class="input-container">
                                 <input class="login_input" type="password" placeholder=" ">
                                 <label> Powtórz hasło </label>
-                                <span class="underline"></span> 
+                                <span class="underline"></span>
                             </div>
                         </div>
 
@@ -131,20 +145,116 @@
                     <h2> Zmień hasło </h2>
 
                     <span>
-                        Nie martw się, to zdarza się najlepszym! <br/>
-                        A żeby poprawić pamięć, spożywaj więcej witamin z rodziny B. 
+                        Nie martw się, to zdarza się najlepszym! <br />
+                        A żeby poprawić pamięć, spożywaj więcej witamin z rodziny B.
                     </span>
 
                     <div class="input-box">
                         <div class="input-container">
                             <input class="login_input" type="email" placeholder="np. example@fitme.com">
                             <label> E-mail </label>
-                            <span class="underline"></span> 
+                            <span class="underline"></span>
                         </div>
                     </div>
 
                     <button class="login_btn"> Wyślij e-mail </button>
-                    <button class="login_btn cancel" onclick="multiClose('change-password-div'); multiOpen('login-box')"> Anuluj </button>
+                    <button class="login_btn cancel"
+                        onclick="multiClose('change-password-div'); multiOpen('login-box')"> Anuluj </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="showroom" class="showroom-box">
+        <div class="showroom-items">
+            <h1> Z <b>FitMe</b> osiągniesz wszystkie swoje cele!  </h1>
+            <div class="showroom-carousel" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500">
+                <div class="showroom-property">
+                    <div class="image-box">
+                        <img src="./images/showroom/main-fin.png">
+                    </div>
+                    <div class="text-box">
+                        <h2> Kompleksowe połączenie </h2>
+                        <p>
+                            Aplikacja FitMe gwarantuje kompleksowe połączenie aplikacji śledzącej dietę
+                            oraz aplikacji monitorującej i proponującej treningi. Wszytsko czego potrzebujesz,
+                            by utrzymać zdrowy tryb życia znajdziesz u nas! Nie musisz już pobierać ikorzystać 
+                            z dwóch osobnych aplikacji. Masz FitMe, które łączy wszytsko w jednym.
+                        <p>
+                        <div class="icon-div">
+                            <img src="./icons/start-icons/connection.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="showroom-property">
+                    <div class="image-box">
+                        <img src="./images/showroom/diet-fin.png">
+                    </div>
+                    <div class="text-box">
+                        <h2> Dieta</h2>
+                        <p>
+                            Monitorowanie diety z FitMe nigdy nie było prostsze! Dzięki naszej aplikacji możesz
+                            dodawać do swojego dnia gotowe posiłki i produkty przygotowane przez nas lub 
+                            dodane przez innych użytkowników. <br/>
+                            Nie znalazłeś posiłku lub produktu który zjadłeś? To żaden problem, możesz sam dodawać
+                            nowy posiłek i podzielić się nim z resztą społeczności.
+                        <p>
+                        <div class="icon-div">
+                            <img src="./icons/start-icons/diet.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="showroom-property">
+                    <div class="image-box">
+                        <img src="./images/showroom/workouts-fin.png">
+                    </div>
+                    <div class="text-box">
+                        <h2> Treningi </h2>
+                        <p>
+                            Nie wiesz jakie ćwiczenia wykonywać? Wypróbuj przygotowane przez nas 
+                            treningi. Wybierz odpowiednią dla Ciebie trudność i wyglądaj jak chcesz. <br/>
+                            Wykonywałeś aktywność, której jeszcze nie ma u nas? Dodaj ją! Uzupełnij potrzebne
+                            informacje i pomóż rozwijać naszą społęczność.
+                        <p>
+                        <div class="icon-div">
+                            <img src="./icons/start-icons/exercise.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="showroom-property">
+                    <div class="image-box">
+                        <img src="./images/showroom/water-monitor-fin.png">
+                    </div>
+                    <div class="text-box">
+                        <h2> Monitor wody </h2>
+                        <p>
+                            Jak wiadomo picie wody jest podstawą! <br/>
+                            FitMe pomaga Ci kontrolować ile wody wypiłeś. Dodaj każdą wypitą szklankę,
+                            a aplikacja zliczy ilość wypitej wody za Ciebie i powiadomi Cię ile zostało do
+                            ustalonego celu. 
+                        <p>
+                        <div class="icon-div">
+                            <img src="./icons/start-icons/drink-water.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="showroom-property">
+                    <div class="image-box">
+                        <img src="./images/showroom/record-fin.png">
+                    </div>
+                    <div class="text-box">
+                        <h2> Ustalanie celów i monitorowanie osiągnięć </h2>
+                        <p>
+                            Nasza aplikacja pozwala Ci ustalać własne cele, takie jak upragniona waga,
+                            ilość dziennie wypitej wody oraz okres w jakim osiągnąć chcesz swój cel. <br/>
+                            By zachęcić Cię do kontynuowania treningów, diety i pracy nad sobą przedstawiamy
+                            Ci Twoje kamienie milowe i osiągnięcia. <br/>
+                            FitMe daje Ci możliwość tworzenia notatek i zapisywania w nich swoich sposprzeżeń
+                            oraz pomysłów. 
+                        <p>
+                        <div class="icon-div">
+                            <img src="./icons/start-icons/target.png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -158,6 +268,12 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="./script/slick-initialize.js"> </script>
+    <script src="./aos-master/dist/aos.js"></script>
+
+    <script type="text/javascript">
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

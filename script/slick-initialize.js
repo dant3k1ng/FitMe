@@ -114,3 +114,14 @@ $(document).ready(function(){
         }
       ]
     });
+
+    $('.showroom-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autioplay: true,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear'
+    })
