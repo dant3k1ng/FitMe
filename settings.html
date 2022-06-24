@@ -82,25 +82,51 @@
             <div class="report-error">
                 <h2> Zgłoś błąd </h2>
 
-                Rodzaj błędu: 
-                <select>
-                    <option value=""> 1 </option>
-                    <option value=""> 2 </option>
-                    <option value=""> 3 </option>
-                </select>
-
-                <br/>
-
-                Na czym polega problem? <br/>
-                <textarea>
+                <p class="one-line">
+                    Rodzaj błędu: 
+                    <select>
+                        <option value=""> błąd 1 </option>
+                        <option value=""> błąd 2 </option>
+                        <option value=""> błąd 3 </option>
+                    </select>
+                </p>
+                <p class="one-line" >Na czym polega problem? </p>
+                <textarea cols="50" rows="10">
 
                 </textarea>
+
+                <button class="reportErrorBtn"> Zgłoś błąd </button>
             </div>
             <div class="spacing-line"> </div>
             <div class="password-reset-div">
                 <h2> Zmień hasło</h2>
 
-                
+                <div class="input-box">
+                    <div class="input-container">
+                        <input class="login_input" type="email" placeholder="np. example@fitme.com">
+                        <label> E-mail </label>
+                        <span class="underline"></span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-container">
+                        <input class="login_input" type="password"
+                            placeholder="min. 8 znaków, jedna duża litera, cyfra">
+                        <label> Podaj hasło </label>
+                        <span class="underline"></span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-container">
+                        <input class="login_input" type="password" placeholder=" ">
+                        <label> Powtórz hasło </label>
+                        <span class="underline"></span>
+                    </div>
+                </div>
+
+                <button class="reportErrorBtn"> Zmień hasło </button>
             </div>
         </div>
     </main>
