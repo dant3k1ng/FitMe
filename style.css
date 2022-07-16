@@ -1178,13 +1178,14 @@ dt img{ width: 30px; }
     margin-left: 40px;
 }
 
-.more-btn {
+.your-meals .more-btn {
     display: flex;
     border: none;
     background: none;
-    position: absolute;
-    bottom: 20px;
-    right: 15px;
+    position: inherit;
+    margin-top: 70px;
+    margin-right: 20px;
+    float: right;
     font-family: 'Inter', sans-serif;
 }
 
@@ -1946,13 +1947,14 @@ li .recipe-div{
     margin-left: 40px;
 }
 
-.more-btn {
+.your-workout .more-btn {
     display: flex;
     border: none;
     background: none;
-    position: absolute;
-    bottom: 20px;
-    right: 15px;
+    position: inherit;
+    float: right;
+    margin-top: 80px;
+    margin-right: 15px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -2107,8 +2109,10 @@ li .recipe-div{
 
 .your-last-workout-bg{
     width: 60%;
+    min-height: 180px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1px;
     background-image: url('./images/last_workout.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -2119,7 +2123,8 @@ li .recipe-div{
 
 .your-last-workout{
     width: 100%;
-    height: 200px;
+    min-height: 180px;
+    margin-bottom: 1px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
@@ -2143,15 +2148,17 @@ li .recipe-div{
 .your-last-workout span{
     display: block;
     text-align: center;
+    margin-bottom: 1px;
 }
 
 .your-last-workout .more-btn {
     display: flex;
     border: none;
     background: none;
-    position: absolute;
-    bottom: 20px;
-    right: 15px;
+    position: inherit;
+    float: right;
+    margin-top: 40px;
+    margin-right: 15px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -2205,7 +2212,7 @@ li .recipe-div{
     max-width: 100%;
     max-height: 60%;
     position: relative;
-    bottom: -20px;
+    bottom: -5px;
     padding: 10px;
     margin-bottom: 1px;
     background-color: #ffffffb6;
@@ -2714,6 +2721,28 @@ li .recipe-div{
     outline: none;
     border-bottom: 2px solid #3a3a3a;
     transition: 0.1s ease-in;
+}
+
+/* 404  */
+
+.error404-content{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.error404-content h1{ font-family: 'Russo One', sans-serif; }
+
+.error-image{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-image img{
+    width: 100%;
 }
 
 /* RESPONSIVE */
@@ -4095,6 +4124,12 @@ li .recipe-div{
     
     .new-meal .add-productBtn{
         margin-top: 20px;
+    }
+
+    .error-image{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
