@@ -58,7 +58,7 @@ main{
     right: 10px;
     top: 105px;
     width: 250px;
-    height: 400px;
+    min-height: 400px;
     background-color: #b2c456e8;
     border-radius: 5px;
     color: #fff;
@@ -191,6 +191,26 @@ dt img{ width: 30px; }
 .smaller-nav{ height: 70px; }
 
 .smaller-img{scale: 0.8; }
+
+.start-footer{
+    width: 100%;
+    height: 100px;
+    background-color: #d2de99;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+.start-footer p{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.start-footer span { font-weight: bold; }
+
+.start-footer a {text-decoration: underline; color: #fff}
 
 /* START */
 
@@ -950,7 +970,7 @@ dt img{ width: 30px; }
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
-    transition: ease-in 0.2s;
+    transition: ease-in .2s;
 }
 
 .selection-div p{
@@ -972,7 +992,7 @@ dt img{ width: 30px; }
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    transition: all 0.2s ease-in-out;
+    transition: all .5s ease-in-out;
     background-size: 180%;
 }
 
@@ -2027,7 +2047,7 @@ li .recipe-div{
 }
    
 .create-workout button.learn-more .circle {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all .5s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
     margin: 0;
@@ -2038,7 +2058,7 @@ li .recipe-div{
 }
    
 .create-workout button.learn-more .circle .icon {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all .5s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -2743,6 +2763,23 @@ li .recipe-div{
 
 .error-image img{
     width: 100%;
+}
+
+/* FAQ */
+
+.faq-content{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-content .title{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    color: #3e3e3e;
 }
 
 /* RESPONSIVE */
@@ -3538,7 +3575,7 @@ li .recipe-div{
         top: 85px;
         right: 0;
         width: 100%;
-        height: 500px;
+        min-height: 500px;
         background-color: #b1c456;
         border-radius: 5px;
         color: #fff;
@@ -3548,6 +3585,7 @@ li .recipe-div{
         -webkit-box-shadow: 9px 11px 47px 0px #55555571;
         -moz-box-shadow: 9px 11px 47px 0px #55555571;
         box-shadow: 9px 11px 47px 0px #55555571;
+        padding-bottom: 10px;
     }
     
     .triangle{
