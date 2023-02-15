@@ -1471,10 +1471,11 @@ dt img{ width: 30px; }
 
 .add-meal-window{
     width: 70%;
-    height: 75vh;
+    min-height: 75vh;
     padding: 30px 20px;
     background-color: #ffffffcb;
     position: absolute;
+    z-index: 9999;
     top: 80px;
     left: 15%;
     border: 1px solid #ccc;
@@ -1530,7 +1531,7 @@ dt img{ width: 30px; }
     font-family: 'Inter', sans-serif;
     width: 30px;
     height: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 .mealDet button:hover{
@@ -1838,7 +1839,6 @@ dt img{ width: 30px; }
 .component-div button:hover img{
     cursor: pointer;
     width: 27px;
-    transform: scale(1.05);
     transition: ease-in-out 0.2s;
 }
 
@@ -1875,7 +1875,7 @@ li .recipe-div{
     background-color: inherit;
     border: none;
     position: relative;
-    top: -80px;
+    top: -50px;
     right: 30px;
 }
 
@@ -2315,6 +2315,7 @@ li .recipe-div{
     -webkit-box-shadow: 0px 5px 15px 0px #4d4d4dbf;
     -moz-box-shadow: 0px 5px 15px 0px #4d4d4dbf;
     box-shadow: 0px 5px 15px 0px #4d4d4dbf;
+    z-index: 999;
 }
 
 .add-workout-title{
@@ -2436,11 +2437,10 @@ li .recipe-div{
 
 .workout-component-div button:hover img{
     cursor: pointer;
-    transform: scale(1.05);
     transition: ease-in-out 0.2s;
 }
 
-.component-div button img{ width: 10px; }
+.component-div button img{ width: 25px; }
 
 .note-box{
     width: 95%;
